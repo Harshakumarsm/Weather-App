@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <link rel="icon" type="image/x-icon" href="assets/weather-news.png">
+</head>
+
+<body>
+    <main class="main-container">
+        <header class="input-container">
+            <input class="city-input" type="text" placeholder="Search City">
+            <button class="search-btn  city-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                    fill="#e8eaed">
+                    <path
+                        d="M792-120.67 532.67-380q-30 25.33-69.64 39.67Q423.39-326 378.67-326q-108.44 0-183.56-75.17Q120-476.33 120-583.33t75.17-182.17q75.16-75.17 182.5-75.17 107.33 0 182.16 75.17 74.84 75.17 74.84 182.27 0 43.23-14 82.9-14 39.66-40.67 73l260 258.66-48 48Zm-414-272q79.17 0 134.58-55.83Q568-504.33 568-583.33q0-79-55.42-134.84Q457.17-774 378-774q-79.72 0-135.53 55.83-55.8 55.84-55.8 134.84t55.8 134.83q55.81 55.83 135.53 55.83Z" />
+                </svg>
+            </button>
+        </header>
+
+        <section class="weather-info " style="display: none;">
+            <div class="location-date_container">
+                <div class="location">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480.06-486.67q30.27 0 51.77-21.56 21.5-21.55 21.5-51.83 0-30.27-21.56-51.77-21.55-21.5-51.83-21.5-30.27 0-51.77 21.56-21.5 21.55-21.5 51.83 0 30.27 21.56 51.77 21.55 21.5 51.83 21.5ZM480-168q129.33-118 191.33-214.17 62-96.16 62-169.83 0-114.86-73.36-188.1-73.36-73.23-179.97-73.23T300.03-740.1q-73.36 73.24-73.36 188.1 0 73.67 63 169.83Q352.67-286 480-168Zm0 88Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                    </svg>
+                    <h4 class="country-txt">Spain</h4>
+                </div>
+                <h5 class="current-date-txt regular-txt">Wed, 07,Sep</h5>
+            </div>
+
+            <div class="weather-summary-container">
+                <img src="assets/weather/clouds.svg" alt="" class="weather-summary-img">
+                <div class="weather-summary-info">
+                    <div class="temp-text">30 °C</div>
+                    <div class="condition-txt regular-txt">Clouds</div>
+                </div>
+            </div>
+            <div class="weather-conditions-container">
+                <div class="condition-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                        fill="#e8eaed">
+                        <path
+                            d="M479-208q16 0 24.5-5.5T512-230q0-11-8.5-17t-25.5-6q-42 0-85.5-26.5T337-373q-2-9-9-14.5t-15-5.5q-11 0-17 8.5t-4 17.5q15 84 71 121.5T479-208Zm1 128q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-60q112 0 186-76.5T740-408q0-79-66.5-179.5T480-800Q353-688 286.5-587.5T220-408q0 115 74 191.5T480-140Zm0-340Z" />
+                    </svg>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Humidity</h5>
+                        <h5 class="humidity-value-txt">55%</h5>
+                    </div>
+                </div>
+                <div class="condition-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                        fill="#e8eaed">
+                        <path
+                            d="M743-631q-26 26-58 38.5T619-580q-34 0-66-12.5T495-631l-75-75q-17-17-37.5-25t-42.5-8q-22 0-42.5 8T260-706l-68 68-43-43 68-68q26-26 58-38.5t65-12.5q33 0 64.5 12.5T462-749l75 75q17 17 37.5 25.5T618-640q23 0 44-8.5t38-25.5l68-68 43 43-68 68Zm0 210q-26 26-58 38.5T619-370q-34 0-66-12.5T495-421l-75-75q-17-17-37.5-25t-42.5-8q-22 0-42.5 8T260-496l-68 68-43-42 68-69q26-26 58-38.5t65-12.5q33 0 64.5 12.5T462-539l75 75q17 17 38 25.5t44 8.5q23 0 43.5-8.5T700-464l68-68 43 43-68 68Zm-1 210q-26 26-57.5 38.5T619-160q-34 0-66-12.5T495-211l-76-75q-17-17-37.5-25t-42.5-8q-22 0-42.5 8T259-286l-68 68-42-42 68-69q26-26 57.5-38.5T339-380q33 0 65 12.5t58 38.5l75 75q17 17 38 25.5t44 8.5q23 0 43.5-8.5T700-254l68-68 42 43-68 68Z" />
+                    </svg>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Wind Speed</h5>
+                        <h5 class="wind-value-txt">2 M/s</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="forecast-item-container">
+                <div class="forecast-item">
+                    <div class="forecast-item-date regular-txt">22 Sep</div>
+                    <img src="assets/weather/thunderstorm.svg" alt="" class="forecast-item-img">
+                    <h5 class="forecast-item-temp">30 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item-date regular-txt" >22 Sep</div>
+                    <img src="assets/weather/thunderstorm.svg" alt="" class="forecast-item-img">
+                    <h5 class="forecast-item-temp">30 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item-date regular-txt">22 Sep</div>
+                    <img src="assets/weather/thunderstorm.svg" alt="" class="forecast-item-img">
+                    <h5 class="forecast-item-temp">30 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item-date regular-txt">22 Sep</div>
+                    <img src="assets/weather/thunderstorm.svg" alt="" class="forecast-item-img">
+                    <h5 class="forecast-item-temp">30 °C</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-city section_message">
+            <img src="assets/message/search-city.png" alt="" class="message-img">
+             <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather conditions of the city
+                </h4>
+             </div>
+        </section>
+
+
+        <section class="not-found section_message" style="display: none;">
+            <img src="assets/message/not-found.png" alt="" class="message-img">
+             <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather conditions of the city
+                </h4>
+             </div>
+        </section>
+
+    </main>
+
+    <script src="index.js" defer></script>
+</body>
+
+</html>
